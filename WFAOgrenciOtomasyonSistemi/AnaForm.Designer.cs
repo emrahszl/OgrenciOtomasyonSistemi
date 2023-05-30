@@ -109,7 +109,8 @@
             Margin = new Padding(4);
             Name = "AnaForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "X Üniversitesi Öğrenci Bilgi Sistemi";
+            Text = "X Üniversitesi Bilgi Yönetim Sistemi";
+            FormClosing += AnaForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)pbPersonelGiris).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbOgrenciGiris).EndInit();
             ResumeLayout(false);

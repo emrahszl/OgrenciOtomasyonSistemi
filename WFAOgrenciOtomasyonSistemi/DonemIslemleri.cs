@@ -17,25 +17,28 @@ namespace WFAOgrenciOtomasyonSistemi
     {
         private readonly OgrenciVerileri _veri;
 
-        private readonly BindingList<Donem> donemler;
-
         public DonemIslemleri(OgrenciVerileri veri)
         {
             _veri = veri;
-            donemler = new BindingList<Donem>();
             InitializeComponent();
-            dgvOgrenciListesi.AutoGenerateColumns = false;
-            dgvSecilenOgrencininDonemleri.AutoGenerateColumns = false;
-            DonemOlustur();
+            VerileriYukle();
             Listele();
         }
 
-        private void DonemOlustur()
+        private void VerileriYukle()
         {
-            for (int i = 0; i < 8; i++)
+            dgvOgrenciListesi.AutoGenerateColumns = false;
+            dgvSecilenOgrencininDonemleri.AutoGenerateColumns = false;
+
+            if (_veri.Donemler.Count < 8)
             {
-                donemler.Add(new Donem());
+                for (int i = 0; i < 8; i++)
+                {
+                    _veri.Donemler.Add(new Donem());
+                }
             }
+
+            dgvOgrenciListesi.DataSource = _veri.Ogrenciler.Where(x => x.Donemler.Count > 0).ToList();
         }
 
         private void Listele()
@@ -44,7 +47,7 @@ namespace WFAOgrenciOtomasyonSistemi
                 item.Items.Clear();
 
             cbOgrenciListesi.DataSource = _veri.Ogrenciler;
-            cbDonemListesi.DataSource = donemler;
+            cbDonemListesi.DataSource = _veri.Donemler;
         }
 
         private void btnDonemEkle_Click(object sender, EventArgs e)
@@ -60,7 +63,6 @@ namespace WFAOgrenciOtomasyonSistemi
             if (btnDonemEkle.Text == "Dönem Ekle")
             {
                 ogrenci.Donemler.Add(donem);
-
                 dgvOgrenciListesi.DataSource = _veri.Ogrenciler.Where(x => x.Donemler.Count > 0).ToList();
             }
             else if (guncellenecekDonem != null)

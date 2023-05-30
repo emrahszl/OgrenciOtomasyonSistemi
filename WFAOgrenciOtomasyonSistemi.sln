@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFAOgrenciOtomasyonSistemi", "WFAOgrenciOtomasyonSistemi\WFAOgrenciOtomasyonSistemi.csproj", "{86335009-408F-4A36-B614-55E6782A522B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WFAOgrenciOtomasyonSistemi", "WFAOgrenciOtomasyonSistemi\WFAOgrenciOtomasyonSistemi.csproj", "{86335009-408F-4A36-B614-55E6782A522B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciVeri", "OkulVeri\OgrenciVeri.csproj", "{8C41BCC5-345F-4EE5-B00D-39D06485FAE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OkulVeri", "OkulVeri\OkulVeri.csproj", "{8C41BCC5-345F-4EE5-B00D-39D06485FAE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -83,9 +83,29 @@ namespace WFAOgrenciOtomasyonSistemi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eklecikar {
+            get {
+                object obj = ResourceManager.GetObject("eklecikar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap employeelogin {
             get {
                 object obj = ResourceManager.GetObject("employeelogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap notgoruntule {
+            get {
+                object obj = ResourceManager.GetObject("notgoruntule", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

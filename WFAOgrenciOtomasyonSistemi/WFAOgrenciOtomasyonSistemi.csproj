@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OkulVeri\OgrenciVeri.csproj" />
+    <ProjectReference Include="..\OkulVeri\OkulVeri.csproj" />
   </ItemGroup>
 
   <ItemGroup>

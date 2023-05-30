@@ -87,7 +87,6 @@
             dgvOgrenciListesi.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvOgrenciListesi.Size = new Size(375, 250);
             dgvOgrenciListesi.TabIndex = 2;
-            dgvOgrenciListesi.Visible = false;
             dgvOgrenciListesi.CellClick += dgvOgrenciListesi_CellClick;
             // 
             // Column1
@@ -182,7 +181,6 @@
             dgvSecilenOgrencininDonemleri.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvSecilenOgrencininDonemleri.Size = new Size(375, 250);
             dgvSecilenOgrencininDonemleri.TabIndex = 7;
-            dgvSecilenOgrencininDonemleri.Visible = false;
             // 
             // Column4
             // 
