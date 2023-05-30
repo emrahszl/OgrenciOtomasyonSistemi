@@ -26,5 +26,10 @@ namespace OkulVeri.Siniflar
         public double FinalNotu { get; set; }
 
         public HarfNotu HarfNotu { get; }
+
+        public override string ToString()
+        {
+            return $"{DersKodu} {DersAdi} {Kredi}";
+        }
     }
 }

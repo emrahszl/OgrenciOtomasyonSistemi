@@ -34,6 +34,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.CornflowerBlue;
             ClientSize = new Size(800, 450);
             Name = "OgrenciEkrani";
             StartPosition = FormStartPosition.CenterParent;

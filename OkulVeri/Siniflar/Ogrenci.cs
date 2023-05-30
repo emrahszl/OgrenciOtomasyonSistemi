@@ -31,7 +31,9 @@ namespace OkulVeri.Siniflar
         }
 
         public string KayitNo { get; }
+
         public string OgrenciNo { get => _ogrenciNo; set => _ogrenciNo = value; }
+
         public string OgrenciAd { get; set; }
 
         public string OgrenciSoyad { get; set; }
@@ -43,5 +45,10 @@ namespace OkulVeri.Siniflar
         public double GenelNotOrtalamasi { get; set; }
 
         public int ToplamKredi { get; set; }
+
+        public override string ToString()
+        {
+            return $"{OgrenciNo} {OgrenciAd} {OgrenciSoyad} ";
+        }
     }
 }

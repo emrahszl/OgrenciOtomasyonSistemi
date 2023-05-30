@@ -18,7 +18,7 @@ namespace OkulVeri.Siniflar
             DonemAdi = $"{_donemNo}. Dönem";
         }
 
-        public string DonemAdi { get; }
+        public string DonemAdi { get; set; }
 
         public Dersler Dersler { get; set; } = new();
 
@@ -27,5 +27,10 @@ namespace OkulVeri.Siniflar
         public HarfNotu DonemHarfNotu { get; set; }
 
         public int DonemKredisi { get; set; }
+
+        public override string ToString()
+        {
+            return $"{DonemAdi}";
+        }
     }
 }

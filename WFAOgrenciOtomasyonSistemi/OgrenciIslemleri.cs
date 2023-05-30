@@ -84,6 +84,8 @@ namespace WFAOgrenciOtomasyonSistemi
                 return;
             }
 
+            gbOgrenciGuncelle.Show();
+
             if (btnGuncelle.Text == "Güncelle")
             {
                 var ogrenci = SecilenOgrenci();
@@ -92,30 +94,30 @@ namespace WFAOgrenciOtomasyonSistemi
                 txtGuncellenecekSoyad.Text = ogrenci.OgrenciSoyad;
                 txtGuncellenecekOgrenciNo.Text = ogrenci.OgrenciNo;
                 dtpKayitTarihi.Value = ogrenci.KayitTarihi;
-                btnGuncelle.Text = "Kaydet";
+                btnGuncelle.Text = "İptal";
                 dgvOgrenciler.Enabled = false;
-                btnIptal.Show();
             }
-            else if (guncellenecekOgrenci != null)
+            else
+            {
+                Sifirla();
+            }
+        }
+        private void btnOgrenciyiKaydet_Click(object sender, EventArgs e)
+        {
+            if (guncellenecekOgrenci != null)
             {
                 guncellenecekOgrenci.OgrenciAd = txtGuncellenecekAd.Text;
                 guncellenecekOgrenci.OgrenciSoyad = txtGuncellenecekSoyad.Text;
                 guncellenecekOgrenci.OgrenciNo = txtGuncellenecekOgrenciNo.Text;
                 guncellenecekOgrenci.KayitTarihi = dtpKayitTarihi.Value;
                 _veri.Ogrenciler.ResetBindings();
-
+                gbOgrenciGuncelle.Hide();
                 Sifirla();
             }
         }
 
-        private void btnIptal_Click(object sender, EventArgs e)
-        {
-            Sifirla();
-        }
-
         private void Sifirla()
         {
-            btnIptal.Hide();
             btnGuncelle.Text = "Güncelle";
             Temizle(gbOgrenciGuncelle);
             dgvOgrenciler.Enabled = true;

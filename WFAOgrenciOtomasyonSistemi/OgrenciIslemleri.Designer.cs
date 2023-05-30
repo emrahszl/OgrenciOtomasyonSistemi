@@ -35,6 +35,7 @@
             txtOgrenciAd = new TextBox();
             label1 = new Label();
             gbOgrenciGuncelle = new GroupBox();
+            btnOgrenciyiKaydet = new Button();
             dtpKayitTarihi = new DateTimePicker();
             txtGuncellenecekAd = new TextBox();
             txtGuncellenecekOgrenciNo = new TextBox();
@@ -51,7 +52,6 @@
             label3 = new Label();
             btnOgrenciSil = new Button();
             btnGuncelle = new Button();
-            btnIptal = new Button();
             gbOgrenciEkle.SuspendLayout();
             gbOgrenciGuncelle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOgrenciler).BeginInit();
@@ -59,7 +59,7 @@
             // 
             // gbOgrenciEkle
             // 
-            gbOgrenciEkle.BackColor = Color.BurlyWood;
+            gbOgrenciEkle.BackColor = Color.White;
             gbOgrenciEkle.Controls.Add(btnOgrenciEkle);
             gbOgrenciEkle.Controls.Add(txtOgrenciSoyad);
             gbOgrenciEkle.Controls.Add(label2);
@@ -76,7 +76,7 @@
             // 
             // btnOgrenciEkle
             // 
-            btnOgrenciEkle.Location = new Point(7, 163);
+            btnOgrenciEkle.Location = new Point(8, 165);
             btnOgrenciEkle.Margin = new Padding(4);
             btnOgrenciEkle.Name = "btnOgrenciEkle";
             btnOgrenciEkle.Size = new Size(272, 45);
@@ -125,7 +125,8 @@
             // 
             // gbOgrenciGuncelle
             // 
-            gbOgrenciGuncelle.BackColor = Color.BurlyWood;
+            gbOgrenciGuncelle.BackColor = Color.White;
+            gbOgrenciGuncelle.Controls.Add(btnOgrenciyiKaydet);
             gbOgrenciGuncelle.Controls.Add(dtpKayitTarihi);
             gbOgrenciGuncelle.Controls.Add(txtGuncellenecekAd);
             gbOgrenciGuncelle.Controls.Add(txtGuncellenecekOgrenciNo);
@@ -134,19 +135,30 @@
             gbOgrenciGuncelle.Controls.Add(label6);
             gbOgrenciGuncelle.Controls.Add(label4);
             gbOgrenciGuncelle.Controls.Add(label5);
-            gbOgrenciGuncelle.Location = new Point(13, 249);
+            gbOgrenciGuncelle.Location = new Point(309, 13);
             gbOgrenciGuncelle.Margin = new Padding(4);
             gbOgrenciGuncelle.Name = "gbOgrenciGuncelle";
             gbOgrenciGuncelle.Padding = new Padding(4);
-            gbOgrenciGuncelle.Size = new Size(287, 299);
+            gbOgrenciGuncelle.Size = new Size(463, 218);
             gbOgrenciGuncelle.TabIndex = 1;
             gbOgrenciGuncelle.TabStop = false;
             gbOgrenciGuncelle.Text = "Öğrenci Güncelle";
+            gbOgrenciGuncelle.Visible = false;
+            // 
+            // btnOgrenciyiKaydet
+            // 
+            btnOgrenciyiKaydet.Location = new Point(7, 166);
+            btnOgrenciyiKaydet.Name = "btnOgrenciyiKaydet";
+            btnOgrenciyiKaydet.Size = new Size(449, 45);
+            btnOgrenciyiKaydet.TabIndex = 3;
+            btnOgrenciyiKaydet.Text = "Öğrenciyi Kaydet";
+            btnOgrenciyiKaydet.UseVisualStyleBackColor = true;
+            btnOgrenciyiKaydet.Click += btnOgrenciyiKaydet_Click;
             // 
             // dtpKayitTarihi
             // 
             dtpKayitTarihi.Format = DateTimePickerFormat.Short;
-            dtpKayitTarihi.Location = new Point(8, 251);
+            dtpKayitTarihi.Location = new Point(185, 126);
             dtpKayitTarihi.Name = "dtpKayitTarihi";
             dtpKayitTarihi.Size = new Size(271, 29);
             dtpKayitTarihi.TabIndex = 2;
@@ -157,13 +169,13 @@
             txtGuncellenecekAd.Location = new Point(8, 55);
             txtGuncellenecekAd.Margin = new Padding(4);
             txtGuncellenecekAd.Name = "txtGuncellenecekAd";
-            txtGuncellenecekAd.Size = new Size(271, 29);
+            txtGuncellenecekAd.Size = new Size(168, 29);
             txtGuncellenecekAd.TabIndex = 1;
             // 
             // txtGuncellenecekOgrenciNo
             // 
             txtGuncellenecekOgrenciNo.BorderStyle = BorderStyle.FixedSingle;
-            txtGuncellenecekOgrenciNo.Location = new Point(8, 183);
+            txtGuncellenecekOgrenciNo.Location = new Point(185, 55);
             txtGuncellenecekOgrenciNo.Margin = new Padding(4);
             txtGuncellenecekOgrenciNo.Name = "txtGuncellenecekOgrenciNo";
             txtGuncellenecekOgrenciNo.Size = new Size(271, 29);
@@ -172,7 +184,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(8, 227);
+            label7.Location = new Point(185, 101);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(85, 21);
@@ -182,16 +194,16 @@
             // txtGuncellenecekSoyad
             // 
             txtGuncellenecekSoyad.BorderStyle = BorderStyle.FixedSingle;
-            txtGuncellenecekSoyad.Location = new Point(8, 117);
+            txtGuncellenecekSoyad.Location = new Point(8, 126);
             txtGuncellenecekSoyad.Margin = new Padding(4);
             txtGuncellenecekSoyad.Name = "txtGuncellenecekSoyad";
-            txtGuncellenecekSoyad.Size = new Size(271, 29);
+            txtGuncellenecekSoyad.Size = new Size(168, 29);
             txtGuncellenecekSoyad.TabIndex = 1;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(8, 158);
+            label6.Location = new Point(185, 30);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(90, 21);
@@ -211,7 +223,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(8, 92);
+            label5.Location = new Point(8, 101);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(53, 21);
@@ -226,14 +238,14 @@
             dgvOgrenciler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvOgrenciler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvOgrenciler.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dgvOgrenciler.Location = new Point(308, 56);
+            dgvOgrenciler.Location = new Point(13, 278);
             dgvOgrenciler.MultiSelect = false;
             dgvOgrenciler.Name = "dgvOgrenciler";
             dgvOgrenciler.ReadOnly = true;
             dgvOgrenciler.RowHeadersVisible = false;
             dgvOgrenciler.RowTemplate.Height = 25;
             dgvOgrenciler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvOgrenciler.Size = new Size(464, 456);
+            dgvOgrenciler.Size = new Size(759, 234);
             dgvOgrenciler.TabIndex = 2;
             // 
             // Column1
@@ -267,9 +279,9 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(333, 13);
+            label3.Location = new Point(12, 235);
             label3.Name = "label3";
-            label3.Size = new Size(439, 40);
+            label3.Size = new Size(760, 40);
             label3.TabIndex = 3;
             label3.Text = "Öğrenci Listesi";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -296,23 +308,12 @@
             btnGuncelle.Visible = false;
             btnGuncelle.Click += btnGuncelle_Click;
             // 
-            // btnIptal
-            // 
-            btnIptal.Location = new Point(460, 520);
-            btnIptal.Name = "btnIptal";
-            btnIptal.Size = new Size(80, 29);
-            btnIptal.TabIndex = 5;
-            btnIptal.Text = "İptal";
-            btnIptal.UseVisualStyleBackColor = true;
-            btnIptal.Visible = false;
-            btnIptal.Click += btnIptal_Click;
-            // 
             // OgrenciIslemleri
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.CornflowerBlue;
             ClientSize = new Size(784, 561);
-            Controls.Add(btnIptal);
             Controls.Add(btnGuncelle);
             Controls.Add(btnOgrenciSil);
             Controls.Add(label3);
@@ -353,10 +354,10 @@
         private Label label4;
         private Label label5;
         private Button btnGuncelle;
-        private Button btnIptal;
         private TextBox txtGuncellenecekOgrenciNo;
         private Label label7;
         private Label label6;
         private DateTimePicker dtpKayitTarihi;
+        private Button btnOgrenciyiKaydet;
     }
 }

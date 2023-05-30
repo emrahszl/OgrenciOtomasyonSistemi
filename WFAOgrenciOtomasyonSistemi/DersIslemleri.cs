@@ -92,7 +92,7 @@ namespace WFAOgrenciOtomasyonSistemi
             if (dr == DialogResult.Yes)
                 _veri.Dersler.Remove(ders);
             else
-                MessageBox.Show("Ders silme işlemi iptal edildi!");
+                MessageBox.Show("Ders silme işlemi iptal edildi.");
         }
 
         private Ders SecilenDers()
@@ -112,6 +112,8 @@ namespace WFAOgrenciOtomasyonSistemi
                 return;
             }
 
+            btnDersEkle.Text = "Dersi Kaydet";
+
             if (btnDersGuncelle.Text == "Güncelle")
             {
                 var ders = SecilenDers();
@@ -126,8 +128,6 @@ namespace WFAOgrenciOtomasyonSistemi
             {
                 Sifirla();
             }
-
-            btnDersEkle.Text = "Dersi Kaydet";
         }
 
         private void Sifirla()
