@@ -1,1 +1,1 @@
-# WFAOgrenciOtomasyonSistemi
+# Ogrenci Otomasyon Sistemi
