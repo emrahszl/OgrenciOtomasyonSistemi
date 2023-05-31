@@ -1,4 +1,5 @@
 ﻿using OgrenciVeri.Siniflar;
+using OkulVeri.Siniflar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +16,21 @@ namespace WFAOgrenciOtomasyonSistemi
     {
         private readonly OgrenciVerileri _veri;
 
-        public DersEkleCikarIslemleri(OgrenciVerileri veri)
+        private readonly Ogrenci _secilenOgrenci;
+
+        public DersEkleCikarIslemleri(OgrenciVerileri veri, Ogrenci secilenOgrenci)
         {
             _veri = veri;
+            _secilenOgrenci = secilenOgrenci;
             InitializeComponent();
+            BilgileriYukle();
+        }
+
+        private void BilgileriYukle()
+        {
+            lblOgrenciAdSoyad.Text = $"{_secilenOgrenci.OgrenciAd} {_secilenOgrenci.OgrenciSoyad}";
+            cbOgrenciDonemSec.Items.Clear();
+            cbOgrenciDonemSec.DataSource = _secilenOgrenci.Donemler;
         }
     }
 }

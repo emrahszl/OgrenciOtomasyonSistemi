@@ -59,12 +59,13 @@
             // 
             // gbOgrenciEkle
             // 
-            gbOgrenciEkle.BackColor = Color.White;
+            gbOgrenciEkle.BackColor = Color.Transparent;
             gbOgrenciEkle.Controls.Add(btnOgrenciEkle);
             gbOgrenciEkle.Controls.Add(txtOgrenciSoyad);
             gbOgrenciEkle.Controls.Add(label2);
             gbOgrenciEkle.Controls.Add(txtOgrenciAd);
             gbOgrenciEkle.Controls.Add(label1);
+            gbOgrenciEkle.ForeColor = Color.White;
             gbOgrenciEkle.Location = new Point(13, 13);
             gbOgrenciEkle.Margin = new Padding(4);
             gbOgrenciEkle.Name = "gbOgrenciEkle";
@@ -76,6 +77,7 @@
             // 
             // btnOgrenciEkle
             // 
+            btnOgrenciEkle.ForeColor = Color.Black;
             btnOgrenciEkle.Location = new Point(8, 165);
             btnOgrenciEkle.Margin = new Padding(4);
             btnOgrenciEkle.Name = "btnOgrenciEkle";
@@ -125,7 +127,7 @@
             // 
             // gbOgrenciGuncelle
             // 
-            gbOgrenciGuncelle.BackColor = Color.White;
+            gbOgrenciGuncelle.BackColor = Color.Transparent;
             gbOgrenciGuncelle.Controls.Add(btnOgrenciyiKaydet);
             gbOgrenciGuncelle.Controls.Add(dtpKayitTarihi);
             gbOgrenciGuncelle.Controls.Add(txtGuncellenecekAd);
@@ -135,6 +137,7 @@
             gbOgrenciGuncelle.Controls.Add(label6);
             gbOgrenciGuncelle.Controls.Add(label4);
             gbOgrenciGuncelle.Controls.Add(label5);
+            gbOgrenciGuncelle.ForeColor = Color.White;
             gbOgrenciGuncelle.Location = new Point(309, 13);
             gbOgrenciGuncelle.Margin = new Padding(4);
             gbOgrenciGuncelle.Name = "gbOgrenciGuncelle";
@@ -147,6 +150,7 @@
             // 
             // btnOgrenciyiKaydet
             // 
+            btnOgrenciyiKaydet.ForeColor = Color.Black;
             btnOgrenciyiKaydet.Location = new Point(7, 166);
             btnOgrenciyiKaydet.Name = "btnOgrenciyiKaydet";
             btnOgrenciyiKaydet.Size = new Size(449, 45);
@@ -238,14 +242,14 @@
             dgvOgrenciler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvOgrenciler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvOgrenciler.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dgvOgrenciler.Location = new Point(13, 278);
+            dgvOgrenciler.Location = new Point(13, 267);
             dgvOgrenciler.MultiSelect = false;
             dgvOgrenciler.Name = "dgvOgrenciler";
             dgvOgrenciler.ReadOnly = true;
             dgvOgrenciler.RowHeadersVisible = false;
             dgvOgrenciler.RowTemplate.Height = 25;
             dgvOgrenciler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvOgrenciler.Size = new Size(759, 234);
+            dgvOgrenciler.Size = new Size(759, 245);
             dgvOgrenciler.TabIndex = 2;
             // 
             // Column1
@@ -279,9 +283,10 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(12, 235);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(13, 235);
             label3.Name = "label3";
-            label3.Size = new Size(760, 40);
+            label3.Size = new Size(759, 29);
             label3.TabIndex = 3;
             label3.Text = "Öğrenci Listesi";
             label3.TextAlign = ContentAlignment.MiddleCenter;

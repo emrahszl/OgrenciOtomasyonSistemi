@@ -40,12 +40,11 @@
             btnDonemSil = new Button();
             btnDonemGuncelle = new Button();
             dgvSecilenOgrencininDonemleri = new DataGridView();
+            label3 = new Label();
+            label4 = new Label();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            label3 = new Label();
-            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvOgrenciListesi).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSecilenOgrencininDonemleri).BeginInit();
             SuspendLayout();
@@ -171,7 +170,7 @@
             dgvSecilenOgrencininDonemleri.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSecilenOgrencininDonemleri.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvSecilenOgrencininDonemleri.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSecilenOgrencininDonemleri.Columns.AddRange(new DataGridViewColumn[] { Column4, Column5, Column6, Column7 });
+            dgvSecilenOgrencininDonemleri.Columns.AddRange(new DataGridViewColumn[] { Column4, Column5, Column6 });
             dgvSecilenOgrencininDonemleri.Location = new Point(393, 264);
             dgvSecilenOgrencininDonemleri.MultiSelect = false;
             dgvSecilenOgrencininDonemleri.Name = "dgvSecilenOgrencininDonemleri";
@@ -181,34 +180,6 @@
             dgvSecilenOgrencininDonemleri.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvSecilenOgrencininDonemleri.Size = new Size(375, 250);
             dgvSecilenOgrencininDonemleri.TabIndex = 7;
-            // 
-            // Column4
-            // 
-            Column4.DataPropertyName = "DonemAdi";
-            Column4.HeaderText = "Dönem Adı";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.DataPropertyName = "DonemKredisi";
-            Column5.HeaderText = "Kredi";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.DataPropertyName = "DonemNotOrtalamasi";
-            Column6.HeaderText = "Not Ortalaması";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            Column7.DataPropertyName = "DonemHarfNotu";
-            Column7.HeaderText = "Harf Notu";
-            Column7.Name = "Column7";
-            Column7.ReadOnly = true;
             // 
             // label3
             // 
@@ -229,6 +200,27 @@
             label4.Size = new Size(86, 21);
             label4.TabIndex = 8;
             label4.Text = "Dönemler";
+            // 
+            // Column4
+            // 
+            Column4.DataPropertyName = "DonemAdi";
+            Column4.HeaderText = "Dönem Adı";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            Column5.DataPropertyName = "DonemKredisi";
+            Column5.HeaderText = "Dönem Kredisi";
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            Column6.DataPropertyName = "DonemNotOrtalamasi";
+            Column6.HeaderText = "Dönem Not Ortalaması";
+            Column6.Name = "Column6";
+            Column6.ReadOnly = true;
             // 
             // DonemIslemleri
             // 
@@ -275,6 +267,5 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
     }
 }

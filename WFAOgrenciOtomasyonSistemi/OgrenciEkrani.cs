@@ -16,11 +16,14 @@ namespace WFAOgrenciOtomasyonSistemi
     {
         private readonly OgrenciVerileri _veri;
 
+        private readonly Ogrenci _secilenOgrenci;
+
         public OgrenciEkrani(OgrenciVerileri veri)
         {
             _veri = veri;
             InitializeComponent();
             KullanicilariYukle();
+            _secilenOgrenci = (Ogrenci)cbKullanicilar.SelectedItem;
         }
 
         private void KullanicilariYukle()
@@ -37,19 +40,23 @@ namespace WFAOgrenciOtomasyonSistemi
                 return;
             }
 
-            var secilenOgrenci = (Ogrenci)cbKullanicilar.SelectedItem;
-            MessageBox.Show($"{secilenOgrenci.OgrenciAd} {secilenOgrenci.OgrenciSoyad} Hoşgeldin!");
+            MessageBox.Show($"{_secilenOgrenci.OgrenciAd} {_secilenOgrenci.OgrenciSoyad} Hoşgeldin!");
             pnlSecenekler.Show();
         }
 
         private void pbDersEkleCikar_Click(object sender, EventArgs e)
         {
-            new DersEkleCikarIslemleri(_veri).ShowDialog();
+            new DersEkleCikarIslemleri(_veri, _secilenOgrenci).ShowDialog();
         }
 
         private void pbNotGoruntule_Click(object sender, EventArgs e)
         {
             new NotGoruntulemeIslemleri(_veri).ShowDialog();
+        }
+
+        private void OgrenciEkrani_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            pnlSecenekler.Hide();
         }
     }
 }

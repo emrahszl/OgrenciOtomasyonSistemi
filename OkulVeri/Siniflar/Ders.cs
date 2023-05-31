@@ -9,10 +9,11 @@ namespace OkulVeri.Siniflar
 {
     public class Ders
     {
-        public Ders(string dersKodu, string dersAdi)
+        public Ders(string dersKodu, string dersAdi, int kredi)
         {
             DersKodu = dersKodu;
             DersAdi = dersAdi;
+            Kredi = kredi;
         }
 
         public string DersKodu { get; set; }
@@ -25,7 +26,23 @@ namespace OkulVeri.Siniflar
 
         public double FinalNotu { get; set; }
 
-        public HarfNotu HarfNotu { get; }
+        private double _dersNotu;
+
+        public double DersNotu
+        {
+            get { return _dersNotu; }
+            set { _dersNotu = value; }
+        }
+
+
+        private HarfNotu _harfNotu;
+
+        public HarfNotu HarfNotu
+        {
+            get { return _harfNotu; }
+            set { _harfNotu = value; }
+        }
+
 
         public override string ToString()
         {

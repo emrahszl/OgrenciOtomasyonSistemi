@@ -24,8 +24,6 @@ namespace OkulVeri.Siniflar
 
         public double DonemNotOrtalamasi { get; set; }
 
-        public HarfNotu DonemHarfNotu { get; set; }
-
         public int DonemKredisi { get; set; }
 
         public override string ToString()

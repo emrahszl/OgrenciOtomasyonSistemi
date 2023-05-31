@@ -28,52 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pbOgrenciIslemleri = new PictureBox();
-            pbDersIslemleri = new PictureBox();
+            pbOgretmenGirisi = new PictureBox();
+            pbMemurGirisi = new PictureBox();
             label3 = new Label();
             label1 = new Label();
             label2 = new Label();
-            pbDonemIslemleri = new PictureBox();
-            label4 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pbOgrenciIslemleri).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDersIslemleri).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbDonemIslemleri).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbOgretmenGirisi).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbMemurGirisi).BeginInit();
             SuspendLayout();
             // 
-            // pbOgrenciIslemleri
+            // pbOgretmenGirisi
             // 
-            pbOgrenciIslemleri.Cursor = Cursors.Hand;
-            pbOgrenciIslemleri.Image = Properties.Resources.student;
-            pbOgrenciIslemleri.Location = new Point(150, 250);
-            pbOgrenciIslemleri.Name = "pbOgrenciIslemleri";
-            pbOgrenciIslemleri.Size = new Size(150, 150);
-            pbOgrenciIslemleri.SizeMode = PictureBoxSizeMode.Zoom;
-            pbOgrenciIslemleri.TabIndex = 0;
-            pbOgrenciIslemleri.TabStop = false;
-            pbOgrenciIslemleri.Click += pbOgrenciIslemleri_Click;
+            pbOgretmenGirisi.Cursor = Cursors.Hand;
+            pbOgretmenGirisi.Image = Properties.Resources.ogretmen;
+            pbOgretmenGirisi.Location = new Point(150, 250);
+            pbOgretmenGirisi.Name = "pbOgretmenGirisi";
+            pbOgretmenGirisi.Size = new Size(150, 150);
+            pbOgretmenGirisi.SizeMode = PictureBoxSizeMode.Zoom;
+            pbOgretmenGirisi.TabIndex = 0;
+            pbOgretmenGirisi.TabStop = false;
+            pbOgretmenGirisi.Click += pbOgretmenGirisi_Click;
             // 
-            // pbDersIslemleri
+            // pbMemurGirisi
             // 
-            pbDersIslemleri.Cursor = Cursors.Hand;
-            pbDersIslemleri.Image = Properties.Resources.courses;
-            pbDersIslemleri.Location = new Point(500, 250);
-            pbDersIslemleri.Name = "pbDersIslemleri";
-            pbDersIslemleri.Size = new Size(150, 150);
-            pbDersIslemleri.SizeMode = PictureBoxSizeMode.Zoom;
-            pbDersIslemleri.TabIndex = 0;
-            pbDersIslemleri.TabStop = false;
-            pbDersIslemleri.Click += pbDersIslemleri_Click;
+            pbMemurGirisi.Cursor = Cursors.Hand;
+            pbMemurGirisi.Image = Properties.Resources.memur;
+            pbMemurGirisi.Location = new Point(500, 250);
+            pbMemurGirisi.Name = "pbMemurGirisi";
+            pbMemurGirisi.Size = new Size(150, 150);
+            pbMemurGirisi.SizeMode = PictureBoxSizeMode.Zoom;
+            pbMemurGirisi.TabIndex = 0;
+            pbMemurGirisi.TabStop = false;
+            pbMemurGirisi.Click += pbMemurGirisi_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(230, 150);
+            label3.Location = new Point(267, 149);
             label3.Name = "label3";
-            label3.Size = new Size(358, 37);
+            label3.Size = new Size(256, 37);
             label3.TabIndex = 5;
-            label3.Text = "Öğrenci İşleri Personel Ekranı";
+            label3.Text = "Personel Giriş Ekranı";
             // 
             // label1
             // 
@@ -83,7 +80,7 @@
             label1.Name = "label1";
             label1.Size = new Size(150, 27);
             label1.TabIndex = 6;
-            label1.Text = "Öğrenci İşlemleri";
+            label1.Text = "Öğretmen Girişi";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -94,31 +91,8 @@
             label2.Name = "label2";
             label2.Size = new Size(150, 27);
             label2.TabIndex = 6;
-            label2.Text = "Ders İşlemleri";
+            label2.Text = "Memur Girişi";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pbDonemIslemleri
-            // 
-            pbDonemIslemleri.Cursor = Cursors.Hand;
-            pbDonemIslemleri.Image = Properties.Resources.semester;
-            pbDonemIslemleri.Location = new Point(327, 250);
-            pbDonemIslemleri.Name = "pbDonemIslemleri";
-            pbDonemIslemleri.Size = new Size(150, 150);
-            pbDonemIslemleri.SizeMode = PictureBoxSizeMode.Zoom;
-            pbDonemIslemleri.TabIndex = 7;
-            pbDonemIslemleri.TabStop = false;
-            pbDonemIslemleri.Click += pbDonemIslemleri_Click;
-            // 
-            // label4
-            // 
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(327, 403);
-            label4.Name = "label4";
-            label4.Size = new Size(150, 27);
-            label4.TabIndex = 6;
-            label4.Text = "Dönem İşlemleri";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PersonelEkrani
             // 
@@ -126,31 +100,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.CornflowerBlue;
             ClientSize = new Size(784, 561);
-            Controls.Add(pbDonemIslemleri);
             Controls.Add(label2);
-            Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(label3);
-            Controls.Add(pbDersIslemleri);
-            Controls.Add(pbOgrenciIslemleri);
+            Controls.Add(pbMemurGirisi);
+            Controls.Add(pbOgretmenGirisi);
             Name = "PersonelEkrani";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Öğrenci İşleri Personel Ekranı";
-            ((System.ComponentModel.ISupportInitialize)pbOgrenciIslemleri).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDersIslemleri).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbDonemIslemleri).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbOgretmenGirisi).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbMemurGirisi).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pbOgrenciIslemleri;
-        private PictureBox pbDersIslemleri;
+        private PictureBox pbOgretmenGirisi;
+        private PictureBox pbMemurGirisi;
         private Label label3;
         private Label label1;
         private Label label2;
-        private PictureBox pbDonemIslemleri;
-        private Label label4;
     }
 }

@@ -144,6 +144,7 @@
             Name = "OgrenciEkrani";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Öğrenci Bilgi Sistemi";
+            FormClosing += OgrenciEkrani_FormClosing;
             pnlSecenekler.ResumeLayout(false);
             pnlSecenekler.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbNotGoruntule).EndInit();

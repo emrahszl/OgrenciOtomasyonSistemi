@@ -23,9 +23,9 @@ namespace WFAOgrenciOtomasyonSistemi
                 string json = File.ReadAllText("veriler.json");
                 veri = JsonSerializer.Deserialize<OgrenciVerileri>(json)!;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                
             }
         }
 
@@ -36,6 +36,12 @@ namespace WFAOgrenciOtomasyonSistemi
 
         private void pbOgrenciGiris_Click(object sender, EventArgs e)
         {
+            if (veri.Ogrenciler.Count <= 0)
+            {
+                MessageBox.Show("Sistemde kayýtlý öðrenci bulunmamaktadýr!");
+                return;
+            }
+
             new OgrenciEkrani(veri).ShowDialog();
         }
 

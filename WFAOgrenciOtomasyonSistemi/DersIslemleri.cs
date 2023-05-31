@@ -1,5 +1,6 @@
 ﻿using OgrenciVeri.Koleksiyonlar;
 using OgrenciVeri.Siniflar;
+using OkulVeri.Enumlar;
 using OkulVeri.Siniflar;
 using System;
 using System.Collections.Generic;
@@ -24,23 +25,6 @@ namespace WFAOgrenciOtomasyonSistemi
             dgvDersler.AutoGenerateColumns = false;
             dgvDersler.DataSource = _veri.Dersler;
         }
-        private void btnUniversiteyeDersEkle_Click(object sender, EventArgs e)
-        {
-            gbUniversiteyeDersEkle.Show();
-            btnOgrenciyeDersEkle.Hide();
-        }
-
-        private void btnOgrenciyeDersEkle_Click(object sender, EventArgs e)
-        {
-            if (_veri.Ogrenciler.Count == 0 || _veri.Dersler.Count == 0)
-            {
-                MessageBox.Show("Üniversitede kayıtlı öğrenci/ders yok!");
-                return;
-            }
-
-            gbOgrenciyeDersEkle.Show();
-            btnUniversiteyeDersEkle.Hide();
-        }
 
         private void btnDersEkle_Click(object sender, EventArgs e)
         {
@@ -56,7 +40,7 @@ namespace WFAOgrenciOtomasyonSistemi
 
             if (btnDersEkle.Text == "Dersi Ekle")
             {
-                _veri.Dersler.Add(new Ders(dersKodu, dersAdi));
+                _veri.Dersler.Add(new Ders(dersKodu, dersAdi, dersKredisi));
                 MessageBox.Show($"{dersAdi} başarıyla eklendi.");
                 dgvDersler.Show();
                 btnDersGuncelle.Show();

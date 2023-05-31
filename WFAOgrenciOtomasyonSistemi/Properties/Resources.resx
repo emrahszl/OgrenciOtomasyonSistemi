@@ -121,11 +121,17 @@
   <data name="courses" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courses.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="memur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\memur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="studentlogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\studentlogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eklecikar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eklecikar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notgoruntule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notgoruntule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="semester" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\semester.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,10 +142,13 @@
   <data name="employeelogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employeelogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ogretmen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ogretmen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="student" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="notgoruntule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notgoruntule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="notepad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notepad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

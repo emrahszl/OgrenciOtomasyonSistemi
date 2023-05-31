@@ -11,24 +11,25 @@ using System.Windows.Forms;
 
 namespace WFAOgrenciOtomasyonSistemi
 {
-    public partial class PersonelEkrani : Form
+    public partial class OgretmenEkrani : Form
     {
         private readonly OgrenciVerileri _veri;
 
-        public PersonelEkrani(OgrenciVerileri veri)
+        public OgretmenEkrani(OgrenciVerileri veri)
         {
             _veri = veri;
             InitializeComponent();
         }
 
-        private void pbOgretmenGirisi_Click(object sender, EventArgs e)
+        private void pbNotGir_Click(object sender, EventArgs e)
         {
-            new OgretmenEkrani(_veri).ShowDialog();
-        }
+            if (_veri.Ogrenciler.Count <= 0)
+            {
+                MessageBox.Show("Sistemde kayıtlı öğrenci bulunmamaktadır!");
+                return;
+            }
 
-        private void pbMemurGirisi_Click(object sender, EventArgs e)
-        {
-            new MemurEkrani(_veri).ShowDialog();
+            new NotEkrani(_veri).ShowDialog();
         }
     }
 }
