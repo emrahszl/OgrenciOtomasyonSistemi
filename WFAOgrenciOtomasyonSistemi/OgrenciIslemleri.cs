@@ -21,8 +21,28 @@ namespace WFAOgrenciOtomasyonSistemi
         {
             _veri = veri;
             InitializeComponent();
+            VerileriYukle();
+        }
+
+        private void VerileriYukle()
+        {
             dgvOgrenciler.AutoGenerateColumns = false;
             dgvOgrenciler.DataSource = _veri.Ogrenciler;
+            KontrolEt();
+        }
+
+        private void KontrolEt()
+        {
+            if (_veri.Ogrenciler.Count > 0)
+            {
+                btnGuncelle.Show();
+                btnOgrenciSil.Show();
+            }
+            else
+            {
+                btnGuncelle.Hide();
+                btnOgrenciSil.Hide();
+            }
         }
 
         private void btnOgrenciEkle_Click(object sender, EventArgs e)
@@ -39,8 +59,6 @@ namespace WFAOgrenciOtomasyonSistemi
             _veri.Ogrenciler.Add(new Ogrenci(ad, soyad));
             MessageBox.Show($"{ad} {soyad} başarıyla eklendi!");
 
-            btnGuncelle.Show();
-            btnOgrenciSil.Show();
             Temizle(gbOgrenciEkle);
         }
 
@@ -65,6 +83,8 @@ namespace WFAOgrenciOtomasyonSistemi
                 _veri.Ogrenciler.Remove(ogrenci);
             else
                 MessageBox.Show("Öğrenci silme işlemi iptal edildi!");
+
+            KontrolEt();
         }
 
         private Ogrenci SecilenOgrenci()

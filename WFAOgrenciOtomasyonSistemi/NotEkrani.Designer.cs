@@ -35,6 +35,7 @@
             cbDersler = new ComboBox();
             label3 = new Label();
             pnlNotGirisEkrani = new Panel();
+            btnNotGuncelle = new Button();
             txtVizeNotu = new TextBox();
             txtDersNotu = new TextBox();
             txtFinalNotu = new TextBox();
@@ -42,11 +43,15 @@
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
-            btnOgrenciyeDonemDersiEkle = new Button();
+            btnDerseNotEkle = new Button();
             label8 = new Label();
             label9 = new Label();
             label7 = new Label();
+            btnNotGir = new Button();
             pnlNotGirisEkrani.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvOgrenciDersler).BeginInit();
             SuspendLayout();
@@ -65,7 +70,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(330, 26);
+            label1.Location = new Point(343, 26);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(93, 21);
@@ -75,7 +80,7 @@
             // cbDonemler
             // 
             cbDonemler.FormattingEnabled = true;
-            cbDonemler.Location = new Point(179, 117);
+            cbDonemler.Location = new Point(179, 112);
             cbDonemler.Margin = new Padding(4);
             cbDonemler.Name = "cbDonemler";
             cbDonemler.Size = new Size(419, 29);
@@ -86,7 +91,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(330, 92);
+            label2.Location = new Point(344, 87);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(89, 21);
@@ -96,7 +101,7 @@
             // cbDersler
             // 
             cbDersler.FormattingEnabled = true;
-            cbDersler.Location = new Point(179, 185);
+            cbDersler.Location = new Point(179, 174);
             cbDersler.Margin = new Padding(4);
             cbDersler.Name = "cbDersler";
             cbDersler.Size = new Size(419, 29);
@@ -107,7 +112,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.White;
-            label3.Location = new Point(339, 160);
+            label3.Location = new Point(353, 149);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(70, 21);
@@ -116,19 +121,30 @@
             // 
             // pnlNotGirisEkrani
             // 
+            pnlNotGirisEkrani.Controls.Add(btnNotGuncelle);
             pnlNotGirisEkrani.Controls.Add(txtVizeNotu);
             pnlNotGirisEkrani.Controls.Add(txtDersNotu);
             pnlNotGirisEkrani.Controls.Add(txtFinalNotu);
             pnlNotGirisEkrani.Controls.Add(dgvOgrenciDersler);
-            pnlNotGirisEkrani.Controls.Add(btnOgrenciyeDonemDersiEkle);
+            pnlNotGirisEkrani.Controls.Add(btnDerseNotEkle);
             pnlNotGirisEkrani.Controls.Add(label8);
             pnlNotGirisEkrani.Controls.Add(label9);
             pnlNotGirisEkrani.Controls.Add(label7);
-            pnlNotGirisEkrani.Location = new Point(12, 225);
+            pnlNotGirisEkrani.Location = new Point(12, 254);
             pnlNotGirisEkrani.Name = "pnlNotGirisEkrani";
-            pnlNotGirisEkrani.Size = new Size(760, 324);
+            pnlNotGirisEkrani.Size = new Size(760, 295);
             pnlNotGirisEkrani.TabIndex = 2;
             pnlNotGirisEkrani.Visible = false;
+            // 
+            // btnNotGuncelle
+            // 
+            btnNotGuncelle.Location = new Point(645, 255);
+            btnNotGuncelle.Name = "btnNotGuncelle";
+            btnNotGuncelle.Size = new Size(112, 36);
+            btnNotGuncelle.TabIndex = 14;
+            btnNotGuncelle.Text = "Not Güncelle";
+            btnNotGuncelle.UseVisualStyleBackColor = true;
+            btnNotGuncelle.Click += btnNotGuncelle_Click;
             // 
             // txtVizeNotu
             // 
@@ -160,17 +176,16 @@
             dgvOgrenciDersler.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvOgrenciDersler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvOgrenciDersler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOgrenciDersler.Columns.AddRange(new DataGridViewColumn[] { Column4, Column5, Column6, Column7 });
-            dgvOgrenciDersler.Location = new Point(3, 80);
+            dgvOgrenciDersler.Columns.AddRange(new DataGridViewColumn[] { Column4, Column5, Column6, Column1, Column2, Column3, Column7 });
+            dgvOgrenciDersler.Location = new Point(3, 68);
             dgvOgrenciDersler.MultiSelect = false;
             dgvOgrenciDersler.Name = "dgvOgrenciDersler";
             dgvOgrenciDersler.ReadOnly = true;
             dgvOgrenciDersler.RowHeadersVisible = false;
             dgvOgrenciDersler.RowTemplate.Height = 25;
             dgvOgrenciDersler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvOgrenciDersler.Size = new Size(754, 241);
+            dgvOgrenciDersler.Size = new Size(754, 181);
             dgvOgrenciDersler.TabIndex = 10;
-            dgvOgrenciDersler.Visible = false;
             // 
             // Column4
             // 
@@ -193,6 +208,27 @@
             Column6.Name = "Column6";
             Column6.ReadOnly = true;
             // 
+            // Column1
+            // 
+            Column1.DataPropertyName = "VizeNotu";
+            Column1.HeaderText = "Vize Notu";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "FinalNotu";
+            Column2.HeaderText = "Final Notu";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.DataPropertyName = "DersNotu";
+            Column3.HeaderText = "Ders Notu";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
             // Column7
             // 
             Column7.DataPropertyName = "HarfNotu";
@@ -200,15 +236,15 @@
             Column7.Name = "Column7";
             Column7.ReadOnly = true;
             // 
-            // btnOgrenciyeDonemDersiEkle
+            // btnDerseNotEkle
             // 
-            btnOgrenciyeDonemDersiEkle.Location = new Point(514, 33);
-            btnOgrenciyeDonemDersiEkle.Name = "btnOgrenciyeDonemDersiEkle";
-            btnOgrenciyeDonemDersiEkle.Size = new Size(141, 29);
-            btnOgrenciyeDonemDersiEkle.TabIndex = 9;
-            btnOgrenciyeDonemDersiEkle.Text = "Not Ekle";
-            btnOgrenciyeDonemDersiEkle.UseVisualStyleBackColor = true;
-            btnOgrenciyeDonemDersiEkle.Click += btnOgrenciyeDonemDersiEkle_Click;
+            btnDerseNotEkle.Location = new Point(514, 33);
+            btnDerseNotEkle.Name = "btnDerseNotEkle";
+            btnDerseNotEkle.Size = new Size(141, 29);
+            btnDerseNotEkle.TabIndex = 9;
+            btnDerseNotEkle.Text = "Not Ekle";
+            btnDerseNotEkle.UseVisualStyleBackColor = true;
+            btnDerseNotEkle.Click += btnDerseNotEkle_Click;
             // 
             // label8
             // 
@@ -240,12 +276,23 @@
             label7.TabIndex = 8;
             label7.Text = "Final Notu";
             // 
+            // btnNotGir
+            // 
+            btnNotGir.Location = new Point(246, 211);
+            btnNotGir.Name = "btnNotGir";
+            btnNotGir.Size = new Size(291, 37);
+            btnNotGir.TabIndex = 3;
+            btnNotGir.Text = "Not Gir";
+            btnNotGir.UseVisualStyleBackColor = true;
+            btnNotGir.Click += btnNotGir_Click;
+            // 
             // NotEkrani
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.CornflowerBlue;
             ClientSize = new Size(784, 561);
+            Controls.Add(btnNotGir);
             Controls.Add(pnlNotGirisEkrani);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -278,13 +325,18 @@
         private TextBox txtDersNotu;
         private TextBox txtFinalNotu;
         private DataGridView dgvOgrenciDersler;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private Button btnOgrenciyeDonemDersiEkle;
+        private Button btnDerseNotEkle;
         private Label label8;
         private Label label9;
         private Label label7;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column7;
+        private Button btnNotGir;
+        private Button btnNotGuncelle;
     }
 }

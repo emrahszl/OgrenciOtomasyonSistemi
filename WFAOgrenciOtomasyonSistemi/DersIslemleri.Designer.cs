@@ -84,7 +84,6 @@
             dgvDersler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvDersler.Size = new Size(448, 406);
             dgvDersler.TabIndex = 5;
-            dgvDersler.Visible = false;
             // 
             // Column1
             // 

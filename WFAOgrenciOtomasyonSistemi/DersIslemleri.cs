@@ -42,7 +42,6 @@ namespace WFAOgrenciOtomasyonSistemi
             {
                 _veri.Dersler.Add(new Ders(dersKodu, dersAdi, dersKredisi));
                 MessageBox.Show($"{dersAdi} başarıyla eklendi.");
-                dgvDersler.Show();
                 btnDersGuncelle.Show();
                 btnDersSil.Show();
             }

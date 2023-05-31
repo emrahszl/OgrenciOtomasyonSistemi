@@ -16,7 +16,7 @@ namespace WFAOgrenciOtomasyonSistemi
     {
         private readonly OgrenciVerileri _veri;
 
-        private readonly Ogrenci _secilenOgrenci;
+        private Ogrenci _secilenOgrenci;
 
         public OgrenciEkrani(OgrenciVerileri veri)
         {
@@ -40,8 +40,20 @@ namespace WFAOgrenciOtomasyonSistemi
                 return;
             }
 
+            if (((Ogrenci)cbKullanicilar.SelectedItem).Donemler.Count == 0)
+            {
+                MessageBox.Show("Öğrenciye kayıtlı dönem yok!");
+                return;
+            }
+
             MessageBox.Show($"{_secilenOgrenci.OgrenciAd} {_secilenOgrenci.OgrenciSoyad} Hoşgeldin!");
             pnlSecenekler.Show();
+            SecenekleriGizle();
+        }
+
+        private void SecenekleriGizle()
+        {
+            pnlGirisYap.Hide();
         }
 
         private void pbDersEkleCikar_Click(object sender, EventArgs e)
@@ -54,8 +66,14 @@ namespace WFAOgrenciOtomasyonSistemi
             new NotGoruntulemeIslemleri(_veri).ShowDialog();
         }
 
-        private void OgrenciEkrani_FormClosing(object sender, FormClosingEventArgs e)
+        private void cbKullanicilar_SelectedIndexChanged(object sender, EventArgs e)
         {
+            _secilenOgrenci = (Ogrenci)cbKullanicilar.SelectedItem;
+        }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            pnlGirisYap.Show();
             pnlSecenekler.Hide();
         }
     }

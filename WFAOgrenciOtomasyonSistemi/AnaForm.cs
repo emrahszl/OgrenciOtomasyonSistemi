@@ -25,7 +25,8 @@ namespace WFAOgrenciOtomasyonSistemi
             }
             catch (Exception ex)
             {
-                
+                MessageBox.Show("Hata oluþtu: " + ex.Message);
+                MessageBox.Show("Stack Trace: " + ex.StackTrace);
             }
         }
 

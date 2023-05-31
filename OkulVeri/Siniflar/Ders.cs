@@ -46,7 +46,7 @@ namespace OkulVeri.Siniflar
 
         public override string ToString()
         {
-            return $"{DersKodu} {DersAdi} {Kredi}";
+            return $"{DersAdi}";
         }
     }
 }

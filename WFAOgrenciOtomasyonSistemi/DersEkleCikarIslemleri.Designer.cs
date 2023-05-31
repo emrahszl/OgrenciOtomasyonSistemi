@@ -31,15 +31,15 @@
             cbOgrenciDonemSec = new ComboBox();
             label1 = new Label();
             label2 = new Label();
-            lviDersler = new ListView();
             lblOgrenciAdSoyad = new Label();
-            btnOnayla = new Button();
+            btnDersKayit = new Button();
+            pnlDersler = new Panel();
             SuspendLayout();
             // 
             // cbOgrenciDonemSec
             // 
             cbOgrenciDonemSec.FormattingEnabled = true;
-            cbOgrenciDonemSec.Location = new Point(285, 139);
+            cbOgrenciDonemSec.Location = new Point(288, 86);
             cbOgrenciDonemSec.Name = "cbOgrenciDonemSec";
             cbOgrenciDonemSec.Size = new Size(206, 29);
             cbOgrenciDonemSec.TabIndex = 1;
@@ -48,7 +48,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = Color.White;
-            label1.Location = new Point(344, 115);
+            label1.Location = new Point(347, 62);
             label1.Name = "label1";
             label1.Size = new Size(89, 21);
             label1.TabIndex = 2;
@@ -58,21 +58,11 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(347, 202);
+            label2.Location = new Point(319, 169);
             label2.Name = "label2";
-            label2.Size = new Size(70, 21);
+            label2.Size = new Size(152, 21);
             label2.TabIndex = 2;
-            label2.Text = "Ders Seç";
-            // 
-            // lviDersler
-            // 
-            lviDersler.BackColor = Color.CadetBlue;
-            lviDersler.BorderStyle = BorderStyle.None;
-            lviDersler.Location = new Point(12, 243);
-            lviDersler.Name = "lviDersler";
-            lviDersler.Size = new Size(760, 261);
-            lviDersler.TabIndex = 3;
-            lviDersler.UseCompatibleStateImageBehavior = false;
+            label2.Text = "Seçilebilecek Dersler";
             // 
             // lblOgrenciAdSoyad
             // 
@@ -84,14 +74,22 @@
             lblOgrenciAdSoyad.Size = new Size(0, 30);
             lblOgrenciAdSoyad.TabIndex = 4;
             // 
-            // btnOnayla
+            // btnDersKayit
             // 
-            btnOnayla.Location = new Point(673, 510);
-            btnOnayla.Name = "btnOnayla";
-            btnOnayla.Size = new Size(99, 39);
-            btnOnayla.TabIndex = 5;
-            btnOnayla.Text = "Onayla";
-            btnOnayla.UseVisualStyleBackColor = true;
+            btnDersKayit.Location = new Point(641, 510);
+            btnDersKayit.Name = "btnDersKayit";
+            btnDersKayit.Size = new Size(131, 39);
+            btnDersKayit.TabIndex = 5;
+            btnDersKayit.Text = "Dersleri Kaydet";
+            btnDersKayit.UseVisualStyleBackColor = true;
+            btnDersKayit.Click += btnDersKayit_Click;
+            // 
+            // pnlDersler
+            // 
+            pnlDersler.Location = new Point(12, 206);
+            pnlDersler.Name = "pnlDersler";
+            pnlDersler.Size = new Size(760, 298);
+            pnlDersler.TabIndex = 6;
             // 
             // DersEkleCikarIslemleri
             // 
@@ -99,9 +97,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.CadetBlue;
             ClientSize = new Size(784, 561);
-            Controls.Add(btnOnayla);
+            Controls.Add(pnlDersler);
+            Controls.Add(btnDersKayit);
             Controls.Add(lblOgrenciAdSoyad);
-            Controls.Add(lviDersler);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(cbOgrenciDonemSec);
@@ -118,8 +116,8 @@
         private ComboBox cbOgrenciDonemSec;
         private Label label1;
         private Label label2;
-        private ListView lviDersler;
         private Label lblOgrenciAdSoyad;
-        private Button btnOnayla;
+        private Button btnDersKayit;
+        private Panel pnlDersler;
     }
 }

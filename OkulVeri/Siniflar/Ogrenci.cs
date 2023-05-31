@@ -17,10 +17,10 @@ namespace OkulVeri.Siniflar
 
         private string _ogrenciNo;
 
-        public Ogrenci(string ad, string soyad)
+        public Ogrenci(string ogrenciAd, string ogrenciSoyad)
         {
-            OgrenciAd = ad;
-            OgrenciSoyad = soyad;
+            OgrenciAd = ogrenciAd;
+            OgrenciSoyad = ogrenciSoyad;
             KayitTarihi = Convert.ToDateTime(DateTime.Now.ToString("d"));
 
             _yilNo = KayitTarihi.Year.ToString().Substring(2);

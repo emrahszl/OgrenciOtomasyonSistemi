@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             cbKullanicilar = new ComboBox();
-            label1 = new Label();
+            lblKullaniciSec = new Label();
             btnGirisYap = new Button();
             pnlSecenekler = new Panel();
+            btnGeri = new Button();
             pbNotGoruntule = new PictureBox();
             label3 = new Label();
             pbDersEkleCikar = new PictureBox();
             label2 = new Label();
+            pnlGirisYap = new Panel();
             pnlSecenekler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbNotGoruntule).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbDersEkleCikar).BeginInit();
+            pnlGirisYap.SuspendLayout();
             SuspendLayout();
             // 
             // cbKullanicilar
@@ -46,26 +49,27 @@
             cbKullanicilar.DropDownStyle = ComboBoxStyle.DropDownList;
             cbKullanicilar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbKullanicilar.FormattingEnabled = true;
-            cbKullanicilar.Location = new Point(242, 82);
+            cbKullanicilar.Location = new Point(226, 68);
             cbKullanicilar.Name = "cbKullanicilar";
             cbKullanicilar.Size = new Size(300, 29);
             cbKullanicilar.TabIndex = 0;
+            cbKullanicilar.SelectedIndexChanged += cbKullanicilar_SelectedIndexChanged;
             // 
-            // label1
+            // lblKullaniciSec
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(332, 49);
-            label1.Name = "label1";
-            label1.Size = new Size(122, 25);
-            label1.TabIndex = 1;
-            label1.Text = "Kullanıcı Seç";
+            lblKullaniciSec.AutoSize = true;
+            lblKullaniciSec.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lblKullaniciSec.ForeColor = Color.White;
+            lblKullaniciSec.Location = new Point(316, 35);
+            lblKullaniciSec.Name = "lblKullaniciSec";
+            lblKullaniciSec.Size = new Size(122, 25);
+            lblKullaniciSec.TabIndex = 1;
+            lblKullaniciSec.Text = "Kullanıcı Seç";
             // 
             // btnGirisYap
             // 
             btnGirisYap.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnGirisYap.Location = new Point(242, 154);
+            btnGirisYap.Location = new Point(226, 122);
             btnGirisYap.Name = "btnGirisYap";
             btnGirisYap.Size = new Size(300, 34);
             btnGirisYap.TabIndex = 2;
@@ -75,15 +79,27 @@
             // 
             // pnlSecenekler
             // 
+            pnlSecenekler.Controls.Add(btnGeri);
             pnlSecenekler.Controls.Add(pbNotGoruntule);
             pnlSecenekler.Controls.Add(label3);
             pnlSecenekler.Controls.Add(pbDersEkleCikar);
             pnlSecenekler.Controls.Add(label2);
-            pnlSecenekler.Location = new Point(12, 260);
+            pnlSecenekler.Location = new Point(12, 173);
             pnlSecenekler.Name = "pnlSecenekler";
-            pnlSecenekler.Size = new Size(760, 289);
+            pnlSecenekler.Size = new Size(760, 376);
             pnlSecenekler.TabIndex = 3;
             pnlSecenekler.Visible = false;
+            // 
+            // btnGeri
+            // 
+            btnGeri.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGeri.Location = new Point(668, 341);
+            btnGeri.Name = "btnGeri";
+            btnGeri.Size = new Size(89, 32);
+            btnGeri.TabIndex = 2;
+            btnGeri.Text = "Geri";
+            btnGeri.UseVisualStyleBackColor = true;
+            btnGeri.Click += btnGeri_Click;
             // 
             // pbNotGoruntule
             // 
@@ -131,37 +147,47 @@
             label2.TabIndex = 1;
             label2.Text = "Ders Ekle-Çıkar İşlemleri";
             // 
+            // pnlGirisYap
+            // 
+            pnlGirisYap.Controls.Add(cbKullanicilar);
+            pnlGirisYap.Controls.Add(lblKullaniciSec);
+            pnlGirisYap.Controls.Add(btnGirisYap);
+            pnlGirisYap.Location = new Point(12, 11);
+            pnlGirisYap.Name = "pnlGirisYap";
+            pnlGirisYap.Size = new Size(760, 156);
+            pnlGirisYap.TabIndex = 4;
+            // 
             // OgrenciEkrani
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.CornflowerBlue;
             ClientSize = new Size(784, 561);
+            Controls.Add(pnlGirisYap);
             Controls.Add(pnlSecenekler);
-            Controls.Add(btnGirisYap);
-            Controls.Add(label1);
-            Controls.Add(cbKullanicilar);
             Name = "OgrenciEkrani";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Öğrenci Bilgi Sistemi";
-            FormClosing += OgrenciEkrani_FormClosing;
             pnlSecenekler.ResumeLayout(false);
             pnlSecenekler.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbNotGoruntule).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbDersEkleCikar).EndInit();
+            pnlGirisYap.ResumeLayout(false);
+            pnlGirisYap.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private ComboBox cbKullanicilar;
-        private Label label1;
+        private Label lblKullaniciSec;
         private Button btnGirisYap;
         private Panel pnlSecenekler;
         private PictureBox pbDersEkleCikar;
         private PictureBox pbNotGoruntule;
         private Label label3;
         private Label label2;
+        private Button btnGeri;
+        private Panel pnlGirisYap;
     }
 }
